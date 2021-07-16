@@ -7,6 +7,56 @@
   view.part>view.view1>view.view2>view.view3
   按Tab
  -->
+ <rich-text>进度条案例6</rich-text>
+<view class="progress-demo">
+<button class="btn" bindtap="start">{{btnText}}</button>
+  <progress percent="{{percent}}" show-info="true" active="true" bindactiveend="end"></progress>
+  <progress percent="{{percent}}" show-info="true" active="true" active-mode="forwards" bindactiveend="end"></progress>
+</view>
+
+<rich-text>进度条案例5</rich-text>
+<view class="progress-demo">
+  <progress percent="80"></progress>
+  <progress percent="65" show-info="true"></progress>
+  <progress percent="65" show-info="true" stroke-width="45rpx"></progress>
+  <progress percent="65" show-info="true" border-radius="24rpx"></progress>
+  <progress percent="65" show-info="true" stroke-width="45rpx" border-radius="24rpx"></progress>
+  <progress percent="65" show-info="true" stroke-width="45rpx" border-radius="24rpx" active="true"></progress>
+  <progress percent="65" show-info="true" stroke-width="45rpx" border-radius="24rpx" active="true" duration="10"></progress>
+  <progress percent="65" show-info="true" stroke-width="45rpx" border-radius="24rpx" backgroundColor="#ff0" activeColor="#f00"></progress>
+</view>
+
+<rich-text>文本案例4</rich-text>
+<view class="text-demo">
+  <text>无法复制的文本内容</text>
+  <text user-select="true">可以复制的文本内容</text>
+</view>
+
+<rich-text>文本案例3</rich-text>
+<view class="text-demo">
+  <text>没有decode="true"时</text>
+  <text>&apos;单引号&apos;
+    &gt;破折号&gt;
+  </text>
+  <text>有decode="true"时</text>
+  <text decode="true">&apos;单引号&apos;
+    &gt;破折号&gt;
+  </text>
+</view>
+
+<rich-text>文本案例2</rich-text>
+<view class="text-demo">
+  <text>这是一行文本
+    换行
+
+    换两行
+    我的空 格保留一个
+  </text>
+  <text space="ensp">我的空 格保留中文字符</text>
+  <text space="emsp">我的空 格保留一半大小</text>
+  <text space="nbsp">我的空 格保留字体大小</text>
+</view>
+
 <text>20210709</text>
 <view class="part">
   <rich-text>单击按钮</rich-text>

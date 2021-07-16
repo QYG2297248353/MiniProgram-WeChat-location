@@ -7,7 +7,21 @@ Page({
   data: {
     msg:"我还没有被点击",
     count:0,
-    color:"#000"
+    color:"#000",
+    btnText:"开始下载",
+    percent:0,
+    isStart:false
+  },
+  start:function(){
+    this.data.isStart=true;
+      this.data.percent+=10;
+    this.setData({percent:this.data.percent,btnText:"继续下载"});
+  },
+  end:function(){
+    if (this.data.percent==100) {
+      this.setData({btnText:"重新下载"});
+      this.data.percent=0;
+    }
   },
   tapMe:function () {
     this.data.count++;

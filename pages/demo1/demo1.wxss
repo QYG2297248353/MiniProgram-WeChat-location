@@ -1,4 +1,12 @@
 /* pages/demo1/demo1.wxss */
+
+.text-demo{
+  display: flex;
+  flex-direction: column;
+  background-color: #eeeeee;
+  line-height: 2;
+}
+
 .msg{
   text-align: center;
   padding: 5px;
