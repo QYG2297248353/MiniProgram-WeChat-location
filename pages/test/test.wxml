@@ -1,0 +1,29 @@
+<!--pages/test/test.wxml-->
+<rich-text style="text-align:center">学生等级</rich-text>
+<!-- 
+view.table>view.tr>view.th*4
+按Tab
+view.tr>view.td*4
+按Tab
+
+ -->
+<view class="table">
+  <view class="tr">
+    <view class="th">姓名</view>
+    <view class="th">课程</view>
+    <view class="th">成绩</view>
+    <view class="th">等级</view>
+  </view>
+  <view class="tr" wx:for="{{stuList}}">
+    <view class="td">{{item.name}}</view>
+    <view class="td">{{item.cour}}</view>
+    <view class="td">{{item.score}}</view>
+    <view class="td">
+      <text style="color:#0f0" wx:if="{{item.score>=100}}">你牛逼</text>
+      <text style="color:#3cec52" wx:elif="{{item.score>=90}}">优秀</text>
+      <text style="color:#6289e4" wx:elif="{{item.score>=75}}">良好</text>
+      <text style="color:#92c959" wx:elif="{{item.score>=60}}">及格</text>
+      <text style="color:#c106e9" wx:else>不及格</text>
+    </view>
+  </view>
+</view>

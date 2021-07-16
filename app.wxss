@@ -1,0 +1,27 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.btn{
+  font-size: 14px;
+  font-weight: normal;
+  background-color: #2980b9; 
+  color: #ffffff;
+}
+rich-text{
+  /* padding: 10px; */
+  text-align: center;
+  font-weight: bold;
+  line-height: 3;
+}
+.part{
+  margin: 20px;
+  background: linear-gradient(to top, #acb6e5, #86fde8);
+  padding: 10px;
+}

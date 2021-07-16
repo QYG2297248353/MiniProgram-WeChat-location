@@ -1,0 +1,109 @@
+<!--pages/demo2/demo2.wxml-->
+<rich-text>轮播实例</rich-text>
+<view class="banner-box">
+  <swiper class="banner" autoplay="true" circular="true" bindchange="changeSwiper">
+    <swiper-item class="banner-item" wx:for="{{banners}}">
+      <view class="bannew-view">
+        <navigator url="{{item.href}}">
+          <image src="../../image/{{item.imgPath}}"></image>
+        </navigator>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="dots">
+    <view class="dot {{index==current?'active':''}}" wx:for="{{banners}}">
+    </view>
+  </view>
+</view>
+
+
+<rich-text>效果横向轮播图</rich-text>
+<swiper class="swiper" indicator-dots="true" duration="3000" autoplay="true" current="2"
+  indicator-color="rgba(255,255,0,0.3)" indicator-active-color="#fff" interval="4000" circular="true">
+  <swiper-item class="item i1">111</swiper-item>
+  <swiper-item class="item i2">222</swiper-item>
+  <swiper-item class="item i3">333</swiper-item>
+</swiper>
+
+<rich-text>效果竖向轮播图</rich-text>
+<swiper class="swiper" vertical="true" indicator-dots="true" duration="3000" autoplay="true" current="2"
+  indicator-color="rgba(255,255,0,0.3)" indicator-active-color="#fff" interval="4000" circular="true">
+  <swiper-item class="item i1">111</swiper-item>
+  <swiper-item class="item i2">222</swiper-item>
+  <swiper-item class="item i3">333</swiper-item>
+</swiper>
+
+<rich-text>效果左右边距轮播图</rich-text>
+<swiper class="swiper" previous-margin="50rpx" next-margin="50rpx" indicator-dots="true" duration="3000" autoplay="true"
+  current="2" indicator-color="rgba(255,255,0,0.3)" indicator-active-color="#fff" interval="4000" circular="true">
+  <swiper-item class="item i1">111</swiper-item>
+  <swiper-item class="item i2">222</swiper-item>
+  <swiper-item class="item i3">333</swiper-item>
+</swiper>
+
+<rich-text>效果任务四轮播图</rich-text>
+<swiper class="swiper swiper-margin" previous-margin="50rpx" next-margin="50rpx" indicator-dots="true" autoplay="true"
+  circular="true">
+  <swiper-item class="item">
+    <view class="i1">111</view>
+  </swiper-item>
+  <swiper-item class="item">
+    <view class="i2">222</view>
+  </swiper-item>
+  <swiper-item class="item">
+    <view class="i3">333</view>
+  </swiper-item>
+</swiper>
+
+
+<rich-text>基础轮播图</rich-text>
+<swiper class="swiper">
+  <swiper-item class="item i1">111</swiper-item>
+  <swiper-item class="item i2">111</swiper-item>
+  <swiper-item class="item i3">111</swiper-item>
+</swiper>
+
+
+<rich-text>横向滚动 scroll-view</rich-text>
+<scroll-view class="h-scroll" scroll-x="true">
+  <view class="block">
+    <view class="v1">第一个</view>
+    <view class="v2">第二个</view>
+    <view class="v3">第三个</view>
+  </view>
+</scroll-view>
+
+
+<rich-text>竖向滚动 scroll-view</rich-text>
+<scroll-view class="v-scroll" scroll-y="true">
+  <view class="block">
+    <view class="v1">第一个</view>
+    <view class="v2">第二个</view>
+    <view class="v3">第三个</view>
+  </view>
+</scroll-view>
+
+
+<scroll-view class="scroll" scroll-y="true" enable-back-to-top="true" bindscrolltolower="scrollLower">
+  <view class="v-main">
+    高三，是一个说不重要，但也重要的年级，有着马上快高考的生活，但是高考只是一个人人生的转折点，必然有人会不放在心上。
+    　　“江康啊，高三了，你还是这幅懒散样，你现在努力一点，长大后就轻松了。”韩老师依旧传导着他的“歪”道理，“不说长大，就说大学，你到了大学别提有多轻松了，你本来就到了好大学，以后找工作别提有多容易了。”
+    　　现在江康别提有多烦了，他恨不得现在就当个聋子...暂时性的聋子。
+    　　“老师，你有一点就说错了，到了大学考不及格就要补考，补考不及格就要重修，重修还要交学费。”一个靠窗的同学一手撑着脑袋，一手转着笔盯着桌上的五三看。
+    　　“沈煦啊，你不好好写你的五三，来着凑热闹干嘛。” 韩老师看着班里唯一的好学生也就这么被江康带坏了，连顶嘴都会了。“真是被江康带坏了。” 韩老师摇摇头说。
+    　　“不，老师，这不是被带坏的，我是纯粹不想让你带坏江康。”那个同学说。
+    　　其实江康在班级人缘并不好，知道他的人，他都不认识，没错，全校都认识他。但认识他的人无非就是在班级被老师“教育”的多了，或者在他早上在读检讨时，知道了他。
+    　　“谢谢哥们。”这人虽然不认识，但是既然帮了他，那必然是好兄弟。
+    　　虽然这节自习都是韩老师的“教育”，但是江康愣是一个字都没听见。高三了，大部分的人都练成了能与世隔绝的本领，还有那小部分人都已经习惯了。当然，江康他肯定是习惯了，但是他可以选择性的听不到。他一节课都趴着桌上，自然不是觉得自己错了，而是在看小说。
+    　　这节课下课，某韩自然是讲不下去了，就自己回办公室了。江康依旧在看小说，连沈煦来到他的位置他都不知道。
+    　　沈煦俯下身子，看看某江在看什么。
+    　　江·看小说十分入迷·康突然觉得旁边的空气很热，他转头一看，一张俊俏的侧脸就在自己旁边。
+    　　“嗯？怎么不翻了，我看完了。”侧脸已经够好看了，那正脸必然是好看到极致，头一转过来，那完美的五官在他该有的地方长得刚好，十分清秀。
+    　　沈煦的脸不知道为什么有一种非常软的感觉，让人看着就想捏一下，这当然不是谁都敢捏的，像江康这种不怕死的人才敢的，所以江康的手不仅在他脸上捏了捏，还揉了揉：“你的脸好软啊，好像女孩子。”
+    　　沈煦任由他捏着，满脸严肃的说：“男孩子是不能被说像女孩子的，况且，你更像女孩子。”
+    　　江康似乎被恼怒了，对他说：“老子着是阳刚之气，我看你是没有就来羡慕我，说我像女孩子。”
+    　　沈煦看着他气鼓鼓的样子不知道为什么想要笑，嘴角压制不住的上扬起来。
+    　　“笑屁，我说的又没错，你连一定阳刚之气都没有。”江康见他笑了，更生气了，别过脸来继续看书。
+    　　“迟早有天我会让你知道我的阳刚之气。”沈煦在他耳边轻轻说。
+  </view>
+</scroll-view>

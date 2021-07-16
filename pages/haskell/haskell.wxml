@@ -1,0 +1,9 @@
+<!--pages/haskell/haskell.wxml-->
+<rich-text style="text-align:center">九九乘法表</rich-text>
+<view style="display:flex; font-size:8px" wx:for="123456789" wx:for-item="i">
+  <view style="flex:1" wx:for="123456789" wx:for-item="j">
+  <text wx:if="{{i>=j}}">
+    {{i}}*{{j}}={{i*j}}
+  </text>
+  </view>
+</view>

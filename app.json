@@ -1,0 +1,19 @@
+{
+  "entryPagePath": "pages/demo2/demo2",
+  "pages": [
+    "pages/test/test",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/haskell/haskell",
+    "pages/demo1/demo1",
+    "pages/demo2/demo2"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#7e3cec",
+    "navigationBarTitleText": "黄新龙",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

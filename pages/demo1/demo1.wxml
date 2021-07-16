@@ -1,0 +1,53 @@
+<!--pages/demo1/demo1.wxml-->
+<!--
+  view.part>rich-text+button.btn
+  按Tab
+  view.msg
+  按Tab
+  view.part>view.view1>view.view2>view.view3
+  按Tab
+ -->
+<text>20210709</text>
+<view class="part">
+  <rich-text>单击按钮</rich-text>
+  <button class="btn" bindtap="tapMe">点击我</button>
+  <view class="msg" style="color:{{color}}">{{msg}}</view>
+</view>
+
+<view class="part">
+  <view class="view1" bindtap="tapv1">
+    第一层
+    <view class="view2" bindtap="tapv2">
+      第二层
+      <view class="view3" bindtap="tapv3">
+        第三层
+      </view>
+    </view>
+  </view>
+  <view class="view1" catchtap="tapv1">
+    第一层
+    <view class="view2" catchtap="tapv2">
+      第二层
+      <view class="view3" catchtap="tapv3">
+        第三层
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="part">
+  <rich-text>icon组件-p49-p50</rich-text>
+  <icon type="success" size="40" />
+  <icon type="safe_success" size="40" />
+  <icon type="info" size="40" />
+  <icon type="info_circle" size="40" />
+  <icon type="success_no_circle" size="40" />
+  <icon type="success_circle" size="40" />
+  <icon type="warn" size="40" />
+  <icon type="waiting_circle" size="40" />
+  <icon type="waiting" size="40" />
+  <icon type="download" size="40" />
+  <icon type="cancel" size="40" />
+  <icon type="clear" size="40" />
+  <icon type="success" size="40" color="red" />
+</view>

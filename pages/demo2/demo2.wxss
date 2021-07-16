@@ -1,0 +1,126 @@
+/* pages/demo2/demo2.wxss */
+/* 扁的提示 */
+.banner-box{
+  position: relative;
+}
+.dots{
+  display:inline-flex;
+  position: absolute;
+  bottom: 1vh;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.dot{
+  margin: 10rpx;
+  width: 40rpx;
+  height: 10rpx;
+  background-color: rgba(0,0,0,.3);
+  border-radius: 5rpx;
+}
+.active{
+  background-color: #0097ff;
+}
+/* 结束 */
+
+.h-scroll{
+  width:90%;
+  margin:0 auto;
+  height:30vh;
+  border:1px solid #000;
+}
+.block{
+  /* 把三个子元素变成弹性盒子 横向排排坐好 */
+  display:flex;
+  /* 这里设置300%  超出了父元素scroll-view的宽度 只能靠横向滚动进行查看后面的内容 */
+  width:300%;
+}
+.v1,.v2,.v3{
+  /* 每个页面占一份 总体三份 */
+  flex:1;
+  /* vh是一个手机端的单位 指的是整体手机屏幕高度的百分之多少 */
+  height:30vh;
+  line-height:30vh;
+  text-align:center;
+  color:#fff;
+}
+.v1{
+  background-color:#879300;
+}
+.v2{
+  background-color:#f20200;
+}
+.v3{
+  background-color:#0097ff;
+}
+
+.v-scroll{
+  width: 90%;
+  margin: 0 auto;
+  height: 30vh;
+}
+.v-scroll .block{
+  width: 100%;
+  flex-direction: column;
+}
+
+.scroll{
+  width: 90%;
+  height: 10px auto;
+  border: 1px solid #000000;
+  height: 30vh;
+}
+.main{
+  width: 300%;
+}
+.v-main{
+  text-align: justify;
+}
+
+
+.i1{
+  background-color: #589840;
+}
+.i2{
+  background-color: #874600;
+}
+.i3{
+  background-color: #f8f297;
+}
+.item{
+  color: #fff;
+  font-size: 20px;
+  height: 30vh;
+  line-height: 30vh;
+  text-align: center;
+}
+.swiper{
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.swiper-margin .item view{
+  margin: 0 10rpx;
+}
+.swiper-margin{
+  height: 35vh;
+  padding-top: 3vh;
+}
+.banner{
+  width: 90%;
+  margin: 0 auto;
+  height: 45vh;
+}
+.banner-view image{
+  width: 40vh;
+  height: 40vh;
+}
+.banner-view{
+  text-align: center;
+  height: 40vh;
+  line-height: 40vh;
+  width: 40ch;
+  margin: 0 auto;
+  border-radius: 7vh;
+  overflow: hidden;
+}
