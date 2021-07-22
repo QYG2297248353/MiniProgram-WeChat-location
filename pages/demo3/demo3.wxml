@@ -1,2 +1,30 @@
 <!--pages/demo3/demo3.wxml-->
-<text>pages/demo3/demo3.wxml</text>
+<rich-text>选择器</rich-text>
+<picker range="{{arr}}" value="{{arrKey}}" bindchange="arrChanger">
+  <view class="choose-item">{{arr[arrKey]}}</view>
+</picker>
+
+<rich-text>多列选择器</rich-text>
+<picker mode="multiSelector" range="{{arr2}}" value="{{arrKey2}}" bindchange="arrChanger2">
+  <view class="choose-item">
+    <block wx:for="{{arr2}}" wx:for-index="i">
+      <block wx:for="{{arrKey2}}" wx:for-index="j" wx:if="{{i==j}}">
+        {{arr2[i][item]}}
+      </block>
+    </block>
+  </view>
+</picker>
+
+<rich-text>日期选择器</rich-text>
+<picker mode="date" value="{{pickerDate}}" bindchange="dateChange" start="{{startDate}}" end="{{endDate}}">
+  <view class="choose-item">
+  {{pickerDate}}
+  </view>
+</picker>
+
+<rich-text>时间选择器</rich-text>
+<picker mode="time" value="{{nowTime}}" bindchange="timeChange">
+  <view class="choose-item">
+  {{nowTime}}
+  </view>
+</picker>
