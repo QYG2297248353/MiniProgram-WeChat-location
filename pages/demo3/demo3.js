@@ -40,14 +40,20 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // 普通
     arr:["特等座","商务座","一等座","二等座","站票座"],
     arrKey:0,
+    // 多列
     arr2:arr2,
     arrKey2:[1,2,0],
+    //日期
     pickerDate:nowDate,
     startDate:nowDate,
     endDate:endDate,
+    // 时间
     nowTime:nowTime,
+    // 地区
+    area:["重庆市","重庆市","万州区"]
   },
 
 
@@ -72,6 +78,12 @@ Page({
   timeChange:function (e) {
     this.setData({
       nowTime:e.detail.value
+    })
+  },
+
+  regionChange:function (e) {
+    this.setData({
+      area:e.detail.value
     })
   },
 

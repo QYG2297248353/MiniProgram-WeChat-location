@@ -28,3 +28,10 @@
   {{nowTime}}
   </view>
 </picker>
+
+<rich-text>地区选择器</rich-text>
+<picker mode="region" value="{{area}}" bindchange="regionChange">
+  <view class="choose-item">
+  {{area}}
+  </view>
+</picker>
