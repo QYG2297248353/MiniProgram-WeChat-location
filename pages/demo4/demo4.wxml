@@ -1,2 +1,93 @@
 <!--pages/demo4/demo4.wxml-->
-<text>pages/demo4/demo4.wxml</text>
+<rich-text>模拟寄件任务</rich-text>
+<form bindsubmit="formSumbmit">
+  <view class="form-block">
+    <text>寄件人信息</text>
+    <view class="item">
+      <label class="item-label">姓名</label>
+      <input type="text" name="send_name" />
+    </view>
+    <view class="item">
+      <label class="item-label">电话</label>
+      <input type="number" name="send_phone" />
+    </view>
+    <view class="item">
+      <label class="item-label">地址</label>
+      <view class="mess_box">
+        <picker mode="region" value="{{sendArea}}" bindchange="sendAreaChange" name="send_area">
+          <view class="choose" name="send_region">{{sendArea}}</view>
+        </picker>
+        <textarea name="send_address"></textarea>
+      </view>
+    </view>
+  </view>
+
+  <view class="form-block">
+    <text>收件人信息</text>
+    <view class="item">
+      <label class="item-label">姓名</label>
+      <input type="text" name="come_name" />
+    </view>
+    <view class="item">
+      <label class="item-label">电话</label>
+      <input type="number" name="come_phone" />
+    </view>
+    <view class="item">
+      <label class="item-label">地址</label>
+      <view class="mess_box">
+        <picker mode="region" value="{{comeArea}}" bindchange="comeAreaChange" name="come_area">
+          <view class="choose" name="come_region">{{comeArea}}</view>
+        </picker>
+        <textarea name="come_address"></textarea>
+      </view>
+    </view>
+  </view>
+
+  <view class="item">
+    <label class="item-label">物品类型</label>
+    <view class="mess_box">
+      <radio-group class="mess1" name="type">
+        <radio value="生活用品">生活用品</radio>
+        <radio value="办公用品">办公用品</radio>
+        <radio value="电子产品">电子产品</radio>
+        <radio value="易碎物品">易碎物品</radio>
+        <radio value="贵重物品">贵重物品</radio>
+      </radio-group>
+    </view>
+  </view>
+
+
+  <view class="item">
+    <label class="item-label">物品重量</label>
+    <view class="slider-box">
+      <slider show-value="{{true}}" min="1" max="20" name="weight"></slider>
+      <text>kg</text>
+    </view>
+  </view>
+
+  <view class="item">
+    <label class="item-label">喜爱快递员</label>
+    <view class="mess_box" name="courier">
+      <checkbox-group class="mess1" name="like">
+        <checkbox value="易烊千玺">易烊千玺</checkbox>
+        <checkbox value="杨洋">杨洋</checkbox>
+        <checkbox value="郭聪明">郭聪明</checkbox>
+        <checkbox value="柯南">柯南</checkbox>
+        <checkbox value="毛利小五郎">毛利小五郎</checkbox>
+        <checkbox value="郭大侠">郭大侠</checkbox>
+      </checkbox-group>
+    </view>
+  </view>
+
+  <view class="item">
+    <label class="item-label">损坏险</label>
+    <switch name="isNeed" class="isneed"></switch>
+  </view>
+  <view class="item">
+    <switch type="checkbox" class="isagree" bindchange="agreeChange">同意快递协议</switch>
+  </view>
+  <view class="item">
+    <button form-type="submit" type="primary" disabled="{{!isAgree}}">提交</button>
+    <button form-type="reset">重置</button>
+  </view>
+</form>

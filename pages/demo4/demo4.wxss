@@ -1,1 +1,100 @@
 /* pages/demo4/demo4.wxss */
+.choose-item{
+  text-align: center;
+  font-size: 20px;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #cccccc;
+  line-height: 32px;
+  height: 32px;
+}
+
+.form-block{
+  border: 1px solid #cccccc;
+  width: 90%;
+  padding: 20px 3% 10px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.form-block text{
+  position: absolute;
+  top: -15px;
+  font-size: 20px;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+input,textarea{
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+input{
+  padding: 10px;
+}
+
+textarea{
+  width: auto;
+}
+
+.item{
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+item-label{
+  padding: 10rpx;
+  flex: 1;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.choose{
+  padding: 10rpx;
+}
+
+.item input,.item .mess_box,.item .slider-box {
+  flex: 2;
+}
+
+.item .isneed{
+  flex: 1;
+}
+.isagree{
+  flex: 1;
+  text-align: center;
+}
+.slider-box slider{
+  margin: 10px;
+  width: 300rpx;
+  margin-right: 0;
+}
+
+.slider-box{
+  display: flex;
+  align-items: center;
+}
+
+.mess1{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mess1 radio,.mess1 checkbox{
+  width: 30%;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+

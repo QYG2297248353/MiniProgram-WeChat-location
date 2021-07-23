@@ -5,9 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    sendArea:["重庆市","重庆市","万州区"],
+    comeArea:["重庆市","重庆市","万州区"],
+    isAgree:false
   },
-
+  agreChange:function(e){
+    this.setData({isAgree:e.detail.value});
+  },
+  comeChange:function(e){
+    this.setData({comeArea:e.detail.value});
+  },
+  sendAreaChange:function(e){
+    this.setData({sendArea:e.detail.value});
+  },
+  formSumbmit:function(e){
+    console.log(e.detail.value);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
