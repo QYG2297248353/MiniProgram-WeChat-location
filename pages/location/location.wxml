@@ -1,0 +1,6 @@
+<!--pages/location/location.wxml-->
+<text>pages/location/location.wxml</text>
+
+<button bindtap="getMyLocation1">获取我的地址1</button>
+
+<button bindtap="getMyLocation2">获取我的地址2</button>
