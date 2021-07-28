@@ -5,13 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    myAddress:""
   },
   getMyLocation1:function(){
+    var that=this
     wx.getLocation({
       type:"wgs84",
       success:function(res){
         console.log(res);
+        wx.request({
+          url: 'url',
+          success:function(response){
+            console.log(response);
+            that.setData({
+              myAddress:response.data.result.address
+            })
+          }
+        })
       }
     })
   },
