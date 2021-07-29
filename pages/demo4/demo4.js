@@ -9,7 +9,7 @@ Page({
     comeArea:["重庆市","重庆市","万州区"],
     isAgree:false
   },
-  agreChange:function(e){
+  agreeChange:function(e){
     this.setData({isAgree:e.detail.value});
   },
   comeChange:function(e){
