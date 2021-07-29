@@ -5,20 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    myAddress:""
+    myAddress: "",
+    "name":"",
+    "address":"",
   },
-  getMyLocation1:function(){
-    var that=this
+  getMyLocation1: function () {
+    var that = this;
     wx.getLocation({
-      type:"wgs84",
-      success:function(res){
+      type: "wgs84",
+      success: function (res) {
         console.log(res);
         wx.request({
-          url: 'url',
-          success:function(response){
+          url: "https://apis.map.qq.com/ws/geocoder/v1/?location=" + res.latitude + "," + res.longitude + "&key=BRRBZ-EENKU-ALRVT-4JFQG-TYYA3-ZZBSU&get_poi=1",
+          success: function (response) {
             console.log(response);
             that.setData({
-              myAddress:response.data.result.address
+              myAddress: response.data.result.address
             })
           }
         })
@@ -26,15 +28,30 @@ Page({
     })
   },
 
-  getMyLocation2:function(){
+  getMyLocation2: function () {
     wx.getLocation({
-      type:"gcj02",
-      success:function(res){
+      type: "gcj02",
+      success: function (res) {
         console.log(res);
+        wx.openLocation({
+          latitude: res.latitude,
+          longitude: res.longitude,
+        })
       }
     })
   },
-
+  chooseMap:function(){
+    var that=this;
+    wx.chooseLocation({
+      success:function(res){
+        console.log(res)
+        that.setData({
+          name:res.name,
+          address:res.address,
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

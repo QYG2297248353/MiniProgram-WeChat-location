@@ -2,5 +2,9 @@
 <text>pages/location/location.wxml</text>
 
 <button bindtap="getMyLocation1">获取我的地址1</button>
-<view>{{myAddress}}</view>
+<view>我当前的地址：{{myAddress}}</view>
+
 <button bindtap="getMyLocation2">获取我的地址2</button>
+<button bindtap="chooseMap">位置选择</button>
+<view>{{name}}</view>
+<view>{{address}}</view>
